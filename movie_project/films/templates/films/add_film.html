@@ -1,0 +1,13 @@
+<!-- films/templates/films/add_film.html -->
+{% extends 'films/base.html' %}
+{% block title %}Добавить фильм{% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h1>Добавить фильм</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+</div>
+{% endblock %}
